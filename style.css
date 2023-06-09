@@ -1,0 +1,80 @@
+  @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,700;1,300&family=Roboto:ital,wght@0,400;0,500;0,700;1,300;1,400&display=swap');
+
+  :root {
+    --PrimaryColor: #040845;
+    --SecondaryColor: #FFD700;
+    --AccentColor: #f8fbf1;
+  }
+
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  html {
+    font-size: 10px;
+  }
+
+  body {
+    font-family: "Roboto", 'Segoe UI', Tahoma;
+    font-size: 1.6rem;
+    background-color: var(--AccentColor);
+    color: var(--AccentColor);
+  }
+
+  #container {
+    background-color: var(--PrimaryColor);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    max-width: 50vw;
+    margin: 10rem auto;
+    padding: 4rem;
+    padding-bottom: 1rem;
+    border-radius: 1.5rem;
+  }
+
+  .header {
+    font-family: "Montserrat", 'Segoe UI', Tahoma;
+    margin-bottom: 2rem;
+  }
+
+  .quoteBox {
+    font-size: 2rem;
+    font-weight: 300;
+    font-style: italic;
+    margin: 1rem auto;
+    line-height: 1.5;
+  }
+
+  #quoteBtn {
+    display: inline-block;
+    background-color: var(--SecondaryColor);
+    font-size: 1.8rem;
+    font-weight: 500;
+    border: none;
+    margin: 2rem auto;
+    padding: 2rem 4rem;
+    color: var(--PrimaryColor);
+    border-radius: .8rem;
+    cursor: pointer;
+    transition: background 300ms ease-in-out;
+  }
+
+  #quoteBtn:hover {
+    background-color: #FFEDB3;
+    font-weight: 700;
+  }
+
+  .countBox {
+    font-style: italic;
+    margin-top: 2rem;
+    padding: 1rem 0 0;
+  }
+
+  .count {
+    font-weight: 700;
+    font-style: normal;
+  }
