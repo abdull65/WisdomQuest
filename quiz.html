@@ -6,11 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" type="text/css" />
     <link rel="stylesheet" href="media-quaries.css" type="text/css" />
-    <script
-      type="module"
-      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
-    ></script>
-    <title>Quote Generator</title>
+    <link rel="stylesheet" href="quiz.css" type="text/css" />
+    <title>Quiz</title>
   </head>
   <body>
     <div id="container">
@@ -54,7 +51,7 @@
       <nav class="navBar">
         <ul class="navList">
           <li class="listItem">
-            <a href="#" class="navLink current">Quote</a>
+            <a href="index.html" class="navLink">Quote</a>
           </li>
           <li class="listItem">
             <a href="advice.html" class="navLink">Advice</a>
@@ -66,19 +63,30 @@
             <a href="riddle.html" class="navLink">Riddles</a>
           </li>
           <li class="listItem">
-            <a href="quiz.html" class="navLink">Quiz</a>
+            <a href="quiz.html" class="navLink current">Quiz</a>
           </li>
         </ul>
       </nav>
-      <div id="quoteContent" class="content">
-        <header class="header">
-          <h1>Random Quote Generator</h1>
-        </header>
-        <p class="quoteBox"></p>
-        <button id="quoteBtn">Generate Quote</button>
-        <p class="countBox">
-          You have read <span class="countQuote"></span> quote.
-        </p>
+      <div class="quizContent">
+        <div class="htmlQuiz">
+          <ol class="htmlQuizList"></ol>
+        </div>
+        <div class="cssQuiz">
+          <ol class="cssQuizList"></ol>
+        </div>
+        <div class="javascriptQuiz">
+          <ol class="javascriptQuizList"></ol>
+        </div>
+        <div class="quizSelection">
+          <input type="button" value="HTML" id="htmlBtn" class="selectBtn" />
+          <input type="button" value="CSS" id="cssBtn" class="selectBtn" />
+          <input
+            type="button"
+            value="JAVASCRIPT"
+            id="javaScriptBtn"
+            class="selectBtn"
+          />
+        </div>
       </div>
     </div>
     <footer class="footer">
@@ -88,5 +96,6 @@
       </p>
     </footer>
     <script src="index.js"></script>
+    <script src="quiz.js"></script>
   </body>
 </html>

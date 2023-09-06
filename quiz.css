@@ -1,0 +1,17 @@
+* {
+  color: #fff;
+}
+
+label {
+  display: block;
+  margin: 1rem 0;
+}
+
+ol {
+  list-style: none;
+  display: none;
+}
+
+.quizContent {
+  display: flex;
+}
