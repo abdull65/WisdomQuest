@@ -1,0 +1,50 @@
+@font-face {
+  font-family: "Adventure";
+  src: url(./fonts/Adventure.otf) format('woff2');
+  font-weight: bolder;
+  font-size: normal;
+}
+
+@font-face {
+  font-family: "Poppins-ExtraBold";
+  src: url(./fonts/Poppins-ExtraBold.ttf) format('woff2');
+  font-weight: bolder;
+  font-size: normal;
+}
+
+.indexContent {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+}
+
+.inexTextBox {
+  z-index: 1;
+  transition: margin 300ms ease-in-out;
+}
+
+.indexHeading h2 {
+  color: #fff;
+  font-family: "Adventure", 'Segoe UI', sans-serif;
+  font-size: 12rem;
+  font-weight: bolder;
+  text-transform: uppercase;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+  letter-spacing: 10px;
+}
+
+.indexImgBox {
+  position: absolute;
+  right: 0;
+}
+
+.indexImgBox img {
+  width: 100%;
+  height: 100%;
+}
+
+/* ////////////////////////////////////////// */
+.openNav .inexTextBox {
+  margin-left: 30rem;
+  transform: perspective(90deg);
+}

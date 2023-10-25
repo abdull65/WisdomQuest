@@ -5,80 +5,90 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" type="text/css" />
+    <link rel="stylesheet" href="index.css" type="text/css" />
     <link rel="stylesheet" href="media-quaries.css" type="text/css" />
     <script
       type="module"
       src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
     ></script>
-    <title>Quote Generator</title>
+    <title>Wisdom Quest || for fun</title>
   </head>
   <body>
-    <div id="container">
-      <div id="navBtnBox">
-        <button class="navBtn" id="menuBtn">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="24"
-            height="24"
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="#fff"
-            stroke-width="2"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            class="feather feather-menu"
-          >
-            <line x1="3" y1="12" x2="21" y2="12"></line>
-            <line x1="3" y1="6" x2="21" y2="6"></line>
-            <line x1="3" y1="18" x2="21" y2="18"></line>
-          </svg>
-        </button>
-        <button class="navBtn" id="closeBtn">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="24"
-            height="24"
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="#fff"
-            stroke-width="2"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            class="feather feather-x"
-          >
-            <line x1="18" y1="6" x2="6" y2="18"></line>
-            <line x1="6" y1="6" x2="18" y2="18"></line>
-          </svg>
-        </button>
-      </div>
-      <nav class="navBar">
-        <ul class="navList">
-          <li class="listItem">
-            <a href="#" class="navLink current">Quote</a>
-          </li>
-          <li class="listItem">
-            <a href="advice.html" class="navLink">Advice</a>
-          </li>
-          <li class="listItem">
-            <a href="game.html" class="navLink">Game</a>
-          </li>
-          <li class="listItem">
-            <a href="riddle.html" class="navLink">Riddles</a>
-          </li>
-          <li class="listItem">
-            <a href="quiz.html" class="navLink">Quiz</a>
-          </li>
-        </ul>
-      </nav>
-      <div id="quoteContent" class="content">
-        <header class="header">
-          <h1>Random Quote Generator</h1>
-        </header>
-        <p class="quoteBox"></p>
-        <button id="quoteBtn">Generate Quote</button>
-        <p class="countBox">
-          You have read <span class="countQuote"></span> quote.
-        </p>
+    <div id="container" class="indexContainer">
+      <header>
+        <div id="navBtnBox">
+          <button class="navBtn" id="menuBtn">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="#040845"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              class="feather feather-menu"
+            >
+              <line x1="3" y1="12" x2="21" y2="12"></line>
+              <line x1="3" y1="6" x2="21" y2="6"></line>
+              <line x1="3" y1="18" x2="21" y2="18"></line>
+            </svg>
+          </button>
+          <button class="navBtn" id="closeBtn">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="#040845"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              class="feather feather-x"
+            >
+              <line x1="18" y1="6" x2="6" y2="18"></line>
+              <line x1="6" y1="6" x2="18" y2="18"></line>
+            </svg>
+          </button>
+        </div>
+        <nav class="navBar">
+          <ul class="navList">
+            <li class="listItem">
+              <a href="#" class="navLink current">Home</a>
+            </li>
+            <li class="listItem">
+              <a href="quote.html" class="navLink">Quote</a>
+            </li>
+            <li class="listItem">
+              <a href="advice.html" class="navLink">Advice</a>
+            </li>
+            <li class="listItem">
+              <a href="game.html" class="navLink">Game</a>
+            </li>
+            <li class="listItem">
+              <a href="riddle.html" class="navLink">Riddles</a>
+            </li>
+            <li class="listItem">
+              <a href="quiz.html" class="navLink">Quiz</a>
+            </li>
+          </ul>
+        </nav>
+      </header>
+      <div class="indexContent">
+        <div class="inexTextBox">
+          <div class="indexHeading">
+            <h2>WisdomQuest</h2>
+          </div>
+        </div>
+        <div class="indexImgBox">
+          <img
+            src="./images/undraw_book_lover_re_rwjy.svg"
+            alt="illustration"
+            class="indexImg"
+          />
+        </div>
       </div>
     </div>
     <footer class="footer">

@@ -14,8 +14,8 @@ const htmlQuizArr = [
   {
     id: 2,
     question: "Which HTML tag is used for creating a hyperlink?",
-    answer: "<a>",
-    options: ["<a>", "<h>", "<link>", "<p>"],
+    answer: "&lt;a&gt;",
+    options: ["&lt;a&gt;", "&lt;h&gt;", "&lt;link&gt;", "&lt;p&gt;"],
   },
   {
     id: 3,
@@ -31,8 +31,8 @@ const htmlQuizArr = [
   {
     id: 4,
     question: "Which HTML tag is used for creating an ordered list?",
-    answer: "<ol>",
-    options: ["<ul>", "<li>", "<ol>", "<dl>"],
+    answer: "&lt;ol&gt;",
+    options: ["&lt;ul&gt;", "&lt;li&gt;", "&lt;ol&gt;", "&lt;dl&gt;"],
   },
   {
     id: 5,
@@ -48,15 +48,15 @@ const htmlQuizArr = [
   {
     id: 6,
     question: "What is the HTML tag used for creating a table?",
-    answer: "<table>",
-    options: ["<table>", "<tab>", "<tr>", "<td>"],
+    answer: "&lt;table&gt;",
+    options: ["&lt;table&gt;", "&lt;tab&gt;", "&lt;tr&gt;", "&lt;td&gt;"],
   },
   {
     id: 7,
     question:
       "Which HTML tag is used for defining the structure of an HTML document?",
-    answer: "<html>",
-    options: ["<head>", "<meta>", "<html>", "<body>"],
+    answer: "&lt;html&gt;",
+    options: ["&lt;head&gt;", "&lt;meta&gt;", "&lt;html&gt;", "&lt;body&gt;"],
   },
   {
     id: 8,
@@ -73,14 +73,19 @@ const htmlQuizArr = [
     id: 9,
     question:
       "Which HTML tag is used for creating a list item in an unordered list?",
-    answer: "<li>",
-    options: ["<ul>", "<li>", "<ol>", "<dl>"],
+    answer: "&lt;li&gt;",
+    options: ["&lt;ul&gt;", "&lt;li&gt;", "&lt;ol&gt;", "&lt;dl&gt;"],
   },
   {
     id: 10,
     question: "What is the HTML tag used for creating a line break?",
-    answer: "<br>",
-    options: ["<lb>", "<linebreak>", "<newline>", "<br>"],
+    answer: "&lt;br&gt;",
+    options: [
+      "&lt;lb&gt;",
+      "&lt;linebreak&gt;",
+      "&lt;newline&gt;",
+      "&lt;br&gt;",
+    ],
   },
   {
     id: 11,
@@ -97,20 +102,30 @@ const htmlQuizArr = [
     id: 12,
     question:
       "Which HTML tag is used for defining the main content of a document?",
-    answer: "<main>",
-    options: ["<main>", "<body>", "<content>", "<section>"],
+    answer: "&lt;main&gt;",
+    options: [
+      "&lt;main&gt;",
+      "&lt;body&gt;",
+      "&lt;content&gt;",
+      "&lt;section&gt;",
+    ],
   },
   {
     id: 13,
     question: "What does the &lt;p&gt; tag stand for in HTML?",
-    answer: "<paragraph>",
-    options: ["<p>", "<para>", "<pg>", "<paragraph>"],
+    answer: "&lt;paragraph&gt;",
+    options: ["&lt;p&gt;", "&lt;para&gt;", "&lt;pg&gt;", "&lt;paragraph&gt;"],
   },
   {
     id: 14,
     question: "Which HTML tag is used for creating a form?",
-    answer: "<form>",
-    options: ["<form>", "<input>", "<submit>", "<button>"],
+    answer: "&lt;form&gt;",
+    options: [
+      "&lt;form&gt;",
+      "&lt;input&gt;",
+      "&lt;submit&gt;",
+      "&lt;button&gt;",
+    ],
   },
   {
     id: 15,
@@ -276,8 +291,8 @@ const javascriptQuizArr = [
   {
     id: 3,
     question: "What is the result of '5 + 3' in JavaScript?",
-    answer: "8",
-    options: ["53", "35", "15", "8"],
+    answer: 8,
+    options: [53, 35, 15, 8],
   },
   {
     id: 4,
@@ -386,65 +401,162 @@ const javascriptQuizArr = [
     ],
   },
 ];
+let currentIndex = 0;
+let score = 0;
 
-// Initialize an empty array to store user answers
-let userAnswerArr = [];
+const quizOptions = document.querySelectorAll(".option");
+const questionEl = document.querySelector(".question");
+const quizBox = document.querySelector(".quizBox");
+const quizSelectionBox = document.querySelector(".quizSelection");
+const controlBtnBox = document.querySelector(".controlBtnBox");
+const showScoreBox = document.querySelector(".showScoreBox");
+const scoreBox = document.querySelector(".scoreBox");
+const a_label = document.querySelector("#a_text");
+const b_label = document.querySelector("#b_text");
+const c_label = document.querySelector("#c_text");
+const d_label = document.querySelector("#d_text");
+const nextBtn = document.getElementById("nextBtn");
+const prevBtn = document.getElementById("prevBtn");
+const nextIconEl = document.querySelector(".nextBtn");
+const submitBtn = document.querySelector(".submitText");
 
-// Define a function called quizQuestion that takes a 'topic' as an argument
-const quizQuestion = function (topic, containerClass) {
-  const quizBox = document.querySelector(`.${containerClass}`);
-
-  topic.forEach((quiz, index) => {
-    const questionTag = document.createElement("li");
-
-    // Calculate the question number starting from 1
-    const questionNumber = index + 1;
-
-    // Set the innerHTML of the list item to the quiz question with the question number
-    questionTag.innerHTML = `${questionNumber}. ${quiz.question}`;
-
-    const separateOptions = quiz.options;
-
-    separateOptions.forEach((option) => {
-      const optionLabel = document.createElement("label");
-      const radioTag = document.createElement("input");
-      radioTag.type = "radio";
-      radioTag.id = quiz.id;
-      radioTag.name = `quiz_${quiz.id + 1}`;
-
-      optionLabel.appendChild(radioTag);
-      optionLabel.appendChild(document.createTextNode(option));
-      questionTag.append(optionLabel);
-
-      radioTag.addEventListener("change", () => {
-        userAnswerArr[quiz.id] = option;
-
-        // Check if the user's answer matches the correct answer
-        if (userAnswerArr[quiz.id] === quiz.answer) {
-          console.log(quiz.question);
-          console.log(quiz.answer);
-          console.log(`Question ${questionNumber}: ${option} - Correct`);
-        } else {
-          console.log(`Question ${questionNumber}: ${option} - Wrong`);
-        }
-      });
-    });
-
-    quizBox.appendChild(questionTag);
+const htmlQuizBtn = document.getElementById("htmlBtn");
+const cssQuizBtn = document.getElementById("cssBtn");
+const javascriptQuizBtn = document.getElementById("javascriptBtn");
+console.log(showScoreBox);
+let quizCategory = htmlQuizArr;
+quizBox.style.visibility = "hidden";
+const selectQuiz = function () {
+  quizBox.style.visibility = "visible";
+  htmlQuizBtn.addEventListener("click", () => {
+    quizCategory = htmlQuizArr;
+    loadQuiz();
+    quizSelectionBox.style.display = "none";
+  });
+  cssQuizBtn.addEventListener("click", () => {
+    quizCategory = cssQuizArr;
+    loadQuiz();
+    quizSelectionBox.style.display = "none";
+  });
+  javascriptQuizBtn.addEventListener("click", () => {
+    quizCategory = javascriptQuizArr;
+    loadQuiz();
+    quizSelectionBox.style.display = "none";
   });
 };
+selectQuiz();
+const loadQuiz = function () {
+  const currentQuestion = quizCategory[currentIndex];
+  questionEl.innerHTML = `${currentQuestion.id}. ${currentQuestion.question}`;
+  a_label.innerHTML = currentQuestion.options[0];
+  b_label.innerHTML = currentQuestion.options[1];
+  c_label.innerHTML = currentQuestion.options[2];
+  d_label.innerHTML = currentQuestion.options[3];
+  uncheckOption();
+};
+const uncheckOption = function () {
+  quizOptions.forEach((myOption) => {
+    if (nextBtn) {
+      myOption.checked = false;
+    }
+  });
+};
+const getSelected = function () {
+  let selectedIndex = -1; // Initialize with an invalid index
 
-// Call the function for each quiz array
-quizQuestion(htmlQuizArr, "htmlQuizList");
-quizQuestion(cssQuizArr, "cssQuizList");
-quizQuestion(javascriptQuizArr, "javascriptQuizList");
+  quizOptions.forEach((selected, index) => {
+    if (selected.checked) {
+      selectedIndex = index;
+    }
+  });
 
-const selectQuizBox = document.querySelector(".quizSelection");
-const htmlQuizList = document.querySelector(".htmlQuizList");
-const htmlBtn = document.getElementById("htmlBtn");
-const cssBtn = document.getElementById("cssBtn");
-const javascriptBtn = document.getElementById("javascriptBtn");
+  return selectedIndex;
+};
+loadQuiz();
+const userAnswers = new Array(quizCategory.length).fill(null);
 
-htmlBtn.addEventListener("click", () => {
-  htmlQuizList.style.display = "block";
+const nextQuestion = function () {
+  const answerIndex = getSelected();
+  if (answerIndex !== -1) {
+    if (
+      answerIndex ===
+      quizCategory[currentIndex].options.indexOf(
+        quizCategory[currentIndex].answer
+      )
+    ) {
+      score++;
+    }
+
+    userAnswers[currentIndex] = answerIndex; // Store the user's answer
+  }
+  currentIndex++;
+  loadQuiz();
+  console.log(score);
+};
+const prevQuestion = function () {
+  if (currentIndex > 0) {
+    currentIndex--;
+    loadQuiz();
+    const prevAnswerIndex = userAnswers[currentIndex];
+    if (prevAnswerIndex !== null) {
+      if (
+        prevAnswerIndex ===
+        quizCategory[currentIndex].options.indexOf(
+          quizCategory[currentIndex].answer
+        )
+      ) {
+        score--;
+      }
+    }
+    console.log(score);
+    console.log(currentIndex);
+  }
+};
+prevBtn.addEventListener("click", () => {
+  if (currentIndex < quizCategory.length) {
+    prevQuestion();
+  }
+  // Check if the next button is currently set to submit
+  if (submitBtn) {
+    // Remove the current event listener
+    nextBtn.removeEventListener("click", submitQuiz);
+    // Assign the nextQuestion function back to the next button
+    nextBtn.addEventListener("click", nextQuestion);
+    // Change the text back to "NEXT"
+    submitBtn.style.display = "none";
+    nextIconEl.style.display = "block";
+  }
+});
+
+let submitQuiz = function () {
+  scoreBox.innerHTML = `You Scored: ${score} / ${quizCategory.length}`;
+  controlBtnBox.style.display = "none";
+  showScoreBox.style.display = "flex";
+  console.log(`${score} / ${quizCategory.length}`);
+};
+
+nextBtn.addEventListener("click", () => {
+  if (currentIndex < quizCategory.length) {
+    nextQuestion();
+    nextBtn.removeEventListener("click", submitQuiz);
+    console.log("currentIndex:", currentIndex);
+  }
+  if (currentIndex === quizCategory.length - 1) {
+    // nextBtn.textContent = "SUBMIT";
+    nextIconEl.style.display = "none";
+    submitBtn.style.display = "block";
+    console.log("currentIndex (else if):", currentIndex);
+  }
+
+  if (submitBtn) {
+    // Remove the current event listener
+    nextBtn.removeEventListener("click", nextQuestion);
+    // Assign the submitQuiz function to the next button
+    nextBtn.addEventListener("click", submitQuiz);
+  }
+});
+
+const resetBtn = document.getElementById("resetQuiz");
+resetBtn.addEventListener("click", () => {
+  location.reload();
 });

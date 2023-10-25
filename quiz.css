@@ -1,17 +1,167 @@
-* {
-  color: #fff;
+button {
+  cursor: pointer;
 }
 
-label {
-  display: block;
-  margin: 1rem 0;
-}
-
-ol {
+ul {
   list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+.content {
+  position: relative;
+  align-items: flex-start;
+  justify-content: space-between;
+  padding-bottom: 2rem;
+}
+
+
+.quizBox {
+  width: 100%;
+}
+
+.question {
+  line-height: 1.2;
+  margin-bottom: 1rem;
+}
+
+.quizList {
+  list-style: none;
+  font-size: 1.8rem;
+  color: #333;
+  margin-bottom: 2rem;
+}
+
+.list {
+  line-height: 2;
+}
+
+.controlBtnBox {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-top: 2rem;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  z-index: 1;
+}
+
+.controlBtn,
+.reset {
+  background-color: transparent;
+  box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+  border: none;
+  padding: 0rem 2rem;
+  margin-bottom: 1rem;
+  font-size: 1.6rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: 100ms;
+}
+
+#prevBtn {
+  margin-left: 1rem;
+}
+
+#nextBtn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 1rem;
+}
+
+.submitText {
   display: none;
 }
 
-.quizContent {
+.controlBtn:active,
+.reset:active {
+  transform: scale(1.1);
+}
+
+.quizSelection,
+.showScoreBox {
   display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #fff;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  border-radius: 10px;
+  z-index: 2;
+}
+
+.selectBtn {
+  background-color: #040845;
+  color: #fff;
+  font-size: 1.6rem;
+  font-weight: 600;
+  padding: 1rem 2rem;
+  border: none;
+  cursor: pointer;
+  transition: 100ms;
+}
+
+.selectBtn:hover {
+  background-color: rgba(4, 8, 69, 0.9);
+}
+
+.selectBtn:active {
+  transform: scale(1.05);
+}
+
+.categoryBtnBox {
+  display: flex;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+/* //////////////////////////////// */
+.illustratorBox {
+  height: 300px;
+  width: 300px;
+  margin-top: -5rem;
+}
+
+.illustrator {
+  width: 100%;
+  height: 100%;
+}
+
+.showScoreBox {
+  display: none;
+  justify-content: space-between;
+  padding: 2rem;
+  font-size: 3rem;
+}
+
+.showScoreBox .illustrationBox {
+  height: 200px;
+  width: 100%;
+}
+
+.reloadBtn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #040845;
+  font-size: 2rem;
+  color: #fff;
+  text-align: center;
+  padding: 1rem 2rem;
+  width: 100%;
+  margin-top: 2rem;
+  border-radius: 10px;
+}
+
+.r-feather-refresh-cw {
+  margin-left: 1rem;
 }

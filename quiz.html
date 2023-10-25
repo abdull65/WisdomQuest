@@ -11,81 +11,203 @@
   </head>
   <body>
     <div id="container">
-      <div id="navBtnBox">
-        <button class="navBtn" id="menuBtn">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="24"
-            height="24"
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="#fff"
-            stroke-width="2"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            class="feather feather-menu"
-          >
-            <line x1="3" y1="12" x2="21" y2="12"></line>
-            <line x1="3" y1="6" x2="21" y2="6"></line>
-            <line x1="3" y1="18" x2="21" y2="18"></line>
-          </svg>
-        </button>
-        <button class="navBtn" id="closeBtn">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="24"
-            height="24"
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="#fff"
-            stroke-width="2"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            class="feather feather-x"
-          >
-            <line x1="18" y1="6" x2="6" y2="18"></line>
-            <line x1="6" y1="6" x2="18" y2="18"></line>
-          </svg>
-        </button>
-      </div>
-      <nav class="navBar">
-        <ul class="navList">
-          <li class="listItem">
-            <a href="index.html" class="navLink">Quote</a>
-          </li>
-          <li class="listItem">
-            <a href="advice.html" class="navLink">Advice</a>
-          </li>
-          <li class="listItem">
-            <a href="game.html" class="navLink">Game</a>
-          </li>
-          <li class="listItem">
-            <a href="riddle.html" class="navLink">Riddles</a>
-          </li>
-          <li class="listItem">
-            <a href="quiz.html" class="navLink current">Quiz</a>
-          </li>
-        </ul>
-      </nav>
-      <div class="quizContent">
-        <div class="htmlQuiz">
-          <ol class="htmlQuizList"></ol>
+      <header>
+        <div id="navBtnBox">
+          <button class="navBtn" id="menuBtn">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="38"
+              height="38"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="#040845"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              class="feather feather-menu"
+            >
+              <line x1="3" y1="12" x2="21" y2="12"></line>
+              <line x1="3" y1="6" x2="21" y2="6"></line>
+              <line x1="3" y1="18" x2="21" y2="18"></line>
+            </svg>
+          </button>
+          <button class="navBtn" id="closeBtn">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="38"
+              height="38"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="#040845"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              class="feather feather-x"
+            >
+              <line x1="18" y1="6" x2="6" y2="18"></line>
+              <line x1="6" y1="6" x2="18" y2="18"></line>
+            </svg>
+          </button>
         </div>
-        <div class="cssQuiz">
-          <ol class="cssQuizList"></ol>
+        <nav class="navBar">
+          <ul class="navList">
+            <li class="listItem">
+              <a href="index.html" class="navLink">Home</a>
+            </li>
+            <li class="listItem">
+              <a href="quote.html" class="navLink">Quote</a>
+            </li>
+            <li class="listItem">
+              <a href="advice.html" class="navLink">Advice</a>
+            </li>
+            <li class="listItem">
+              <a href="game.html" class="navLink">Game</a>
+            </li>
+            <li class="listItem">
+              <a href="riddle.html" class="navLink">Riddles</a>
+            </li>
+            <li class="listItem">
+              <a href="quiz.html" class="navLink current">Quiz</a>
+            </li>
+          </ul>
+        </nav>
+      </header>
+      <div class="quizContent content">
+        <div class="quizBox htmlQuiz">
+          <h2 class="question">Question</h2>
+          <ul class="quizList htmlQuizList">
+            <li class="list">
+              <input type="radio" name="answer" id="a" class="option" />
+              <label for="a" class="label" id="a_text">Answer</label>
+            </li>
+            <li class="list">
+              <input type="radio" name="answer" id="b" class="option" />
+              <label for="b" class="label" id="b_text">Answer</label>
+            </li>
+            <li class="list">
+              <input type="radio" name="answer" id="c" class="option" />
+              <label for="c" class="label" id="c_text">Answer</label>
+            </li>
+            <li class="list">
+              <input type="radio" name="answer" id="d" class="option" />
+              <label for="d" class="label" id="d_text">Answer</label>
+            </li>
+          </ul>
         </div>
-        <div class="javascriptQuiz">
-          <ol class="javascriptQuizList"></ol>
+        <div class="controlBtnBox">
+          <button class="controlBtn" id="prevBtn">
+            <span class="prev">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="36"
+                height="36"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="#040845"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="feather feather-chevron-left"
+              >
+                <polyline points="15 18 9 12 15 6"></polyline>
+              </svg>
+            </span>
+          </button>
+          <button class="reset" id="resetQuiz">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="32"
+              height="32"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="#f00"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              class="feather feather-refresh-cw"
+            >
+              <polyline points="23 4 23 10 17 10"></polyline>
+              <polyline points="1 20 1 14 7 14"></polyline>
+              <path
+                d="M3.51 9a9 9 0 0 1 14.85-3.36L23 10M1 14l4.64 4.36A9 9 0 0 0 20.49 15"
+              ></path>
+            </svg>
+          </button>
+          <button class="controlBtn" id="nextBtn">
+            <span class="nextBtn">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="36"
+                height="36"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="#040845"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="feather feather-chevron-right"
+              >
+                <polyline points="9 18 15 12 9 6"></polyline>
+              </svg>
+            </span>
+            <span class="submitText">SUBMIT</span>
+          </button>
         </div>
         <div class="quizSelection">
-          <input type="button" value="HTML" id="htmlBtn" class="selectBtn" />
-          <input type="button" value="CSS" id="cssBtn" class="selectBtn" />
-          <input
-            type="button"
-            value="JAVASCRIPT"
-            id="javaScriptBtn"
-            class="selectBtn"
-          />
+          <div class="illustratorBox">
+            <img
+              src="./images/undraw_code_review_re_woeb.svg"
+              alt="coding illustrator"
+              class="illustrator"
+            />
+          </div>
+          <h2>Select Quiz</h2>
+          <div class="categoryBtnBox">
+            <input type="button" value="HTML" id="htmlBtn" class="selectBtn" />
+            <input type="button" value="CSS" id="cssBtn" class="selectBtn" />
+            <input
+              type="button"
+              value="JAVASCRIPT"
+              id="javascriptBtn"
+              class="selectBtn"
+            />
+          </div>
+        </div>
+        <div class="showScoreBox">
+          <div class="illustrationBox">
+            <img
+              src="./images/undraw_checklist__re_2w7v.svg"
+              alt="complete task illustration"
+              style="
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                object-position: center;
+              "
+            />
+          </div>
+          <p class="scoreBox"></p>
+          <button class="reloadBtn" onclick="location.reload()">
+            Reload
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="#f00"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              class="feather r-feather-refresh-cw"
+            >
+              <polyline points="23 4 23 10 17 10"></polyline>
+              <polyline points="1 20 1 14 7 14"></polyline>
+              <path
+                d="M3.51 9a9 9 0 0 1 14.85-3.36L23 10M1 14l4.64 4.36A9 9 0 0 0 20.49 15"
+              ></path>
+            </svg>
+          </button>
         </div>
       </div>
     </div>
