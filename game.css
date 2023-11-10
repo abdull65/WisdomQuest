@@ -57,6 +57,7 @@ td {
   background-color: #333;
   display: grid;
   grid-template: repeat(30, 1fr) / repeat(30, 1fr);
+  gap: 0;
   border-bottom-left-radius: 1rem;
   border-bottom-right-radius: 1rem;
 }
@@ -67,6 +68,8 @@ td {
 
 .gameBox .snake {
   background-color: #00f;
+  height: 100%;
+  width: 100%;
 }
 
 .mobileControlBox {
