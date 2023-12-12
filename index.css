@@ -1,50 +1,364 @@
-@font-face {
-  font-family: "Adventure";
-  src: url(./fonts/Adventure.otf) format('woff2');
-  font-weight: bolder;
-  font-size: normal;
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Paytone+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,700;1,300;1,400;1,600&display=swap');
+:root {
+  --PrimaryColor: #0E87F9;
+  --SecondaryColor: #FFD700;
+  --AccentColor: #f8fbf1;
 }
-
-@font-face {
-  font-family: "Poppins-ExtraBold";
-  src: url(./fonts/Poppins-ExtraBold.ttf) format('woff2');
-  font-weight: bolder;
-  font-size: normal;
+html {
+  font-size: 10px;
+  overflow: hidden;
 }
-
+img {
+  height: 100%;
+  width: 100%;
+}
+#mobile {
+  display: none;
+}
+@font-face {
+  font-family: "openSansMs";
+  src: url("./fonts/open\ sans\ ms.ttf");
+}
+.indexContainer {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
 .indexContent {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
+  display: flex;
   align-items: center;
+  justify-content: space-between;
+  height: 70%;
+  padding-left: 10rem;
 }
-
-.inexTextBox {
+.indexTextBox {
+  color: var(--AccentColor);
+  width: 50%;
+  margin-top: 5rem;
   z-index: 1;
-  transition: margin 300ms ease-in-out;
 }
-
-.indexHeading h2 {
-  color: #fff;
-  font-family: "Adventure", 'Segoe UI', sans-serif;
-  font-size: 12rem;
-  font-weight: bolder;
-  text-transform: uppercase;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
-  letter-spacing: 10px;
+.indexTextBox .topHeader {
+  font-family: "Montserrat", "serif";
+  font-size: 2.4rem;
+  font-weight: 600;
+  letter-spacing: 5px;
+  line-height: 0;
 }
-
-.indexImgBox {
+.indexTextBox h1 {
+  font-family: 'Paytone One', sans-serif;
+  font-size: 8rem;
+  color: #ffffff;
+  letter-spacing: 0px;
+  font-weight: 700;
+  filter: drop-shadow(8px 8px 5px #555);
+  position: relative;
+  
+}
+.indexTextBox h1 .quest {
+  color: #0E87F9;
+  text-shadow: -1px 1px 0 #ffffff,
+  1px 1px 0 #ffffff,
+ 1px -1px 0 #ffffff,
+-1px -1px 0 #ffffff;
+}
+.indexTextBox h1::before {
+  content: url("./images/svgbracket1.svg"); 
   position: absolute;
-  right: 0;
+  top: -11rem;
+  left: -17.5rem;
 }
-
-.indexImgBox img {
+.indexTextBox h1::after {
+  content: url("./images/svgbracket2.svg");
+  position: absolute;
+  top: -7rem;
+  right: -16rem;
+}
+.indexTextBox p {
+  font-family: "Montserrat", "serif";
+  font-size: 2rem;
+  font-weight: 400;
+  padding-right: 5rem;
+  margin-top: 2rem;
+  line-height: 1.5;
+}
+.indexImgBox {
+  height: 40rem;
+  width: 45rem;
+  margin-right: 5rem;
+}
+.indexImgBox img{
   width: 100%;
   height: 100%;
+  object-fit: cover;
+  filter: drop-shadow(8px 8px 5px #333);
+}
+.featuresBox {
+  display: flex;
+  justify-content: space-evenly;
+  height: 30%;
+  width: 100%;
+  gap: 2rem;
+  position: absolute;
+  bottom: 5rem;
+}
+.boxCard {
+  height: 25rem;
+  width: 20%;
+}
+.boxCard img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  filter: drop-shadow(8px 8px 5px #333);
+
+}
+.icon {
+  position: absolute;
+  opacity: .3;
+  height: 3rem;
+  width: 3rem;
+}
+.light {
+    position: absolute;
+  left: -15rem;
+  top: -18rem;
+  object-fit: contain;
+    opacity: .5;
+}
+ .star1 {
+  top: 5rem;
+  left: 75rem;
+}
+.star2 {
+  top: 25rem;
+  left: 85rem;
+}
+.bracket1 {
+ top: 40rem;
+ left: 70rem;
+}
+.bracket2 {
+  top: 28rem;
+  left: 30rem;
+}
+.planet {
+  top: 33rem;
+  left: 80rem;
+  height: 6rem;
+  width: 6rem;
+}
+.infinity {
+  right: 3rem;
+  top: 20rem;
+  transform: rotate(75deg);
+  width:2rem;
+  height: 2rem;
+}
+.infinity2 {
+  width:2rem;
+  height: 2rem;
+left: 20rem;
+top: 10rem;
+transform: rotate(180deg);
+}
+.curve {
+  left: 25rem;
+  top: 5rem;
+  height: 5rem;
+  width: 5rem;
+}
+.zigzag {
+  height: 5rem;
+  width: 5rem;
+  top: 5rem;
+ right: 0;
+}
+.zigzag1 {
+bottom: 3rem;
+left: 0rem;
+height: 6rem;
+width: 6rem;
+}
+.angle {
+  top: 0rem;
+right: 20rem;
+height: 10rem;
+width: 10rem;
+}
+.time {
+bottom: 3rem;
+right: 3rem;
+height: 5rem;
+width: 5rem;
+} 
+/* ************************************************** */
+@media screen and (max-width: 77em) {
+   .indexContent {
+   flex-direction: column;
+  }
+  html {
+    overflow: auto;
+    overflow-x: hidden;
+  }
+}
+@media screen and (max-width: 66em) {
+  .indexTextBox h1::after {
+    right: 14rem;
+  }
 }
 
-/* ////////////////////////////////////////// */
-.openNav .inexTextBox {
-  margin-left: 30rem;
-  transform: perspective(90deg);
+@media screen and (max-width: 64em) {
+  .indexTextBox h1::after {
+    right: 12rem;
+  }
+}
+
+@media screen and (max-width: 63em) {
+  .indexTextBox h1::after {
+    right: 10rem;
+  }
+}
+
+@media screen and (max-width: 61em) {
+  .indexTextBox h1::after {
+    right: 10rem;
+  }
+}
+
+@media screen and (max-width: 58em) {
+  .indexTextBox h1::after {
+    right: 6rem;
+  }
+}
+
+@media screen and (max-width: 55em) {
+  .indexTextBox h1::after {
+    right: 3rem;
+  }
+}
+
+@media screen and (max-width: 45em){
+  #desktop {
+    display: none;
+  }
+  #mobile {
+    display: block;
+  }
+
+  body {
+    height: 100%;
+  }
+  .indexContent {
+    flex-direction: column;
+    gap: 3rem;
+    height: 100%;
+  }
+  .indexTextBox {
+    width: 100%;
+    margin-top: 15rem;
+    margin-left: 8rem !important;
+  }
+  .indexTextBox .topHeader {
+    font-size: 1.6rem;
+    margin-bottom: .5rem;
+    letter-spacing: 3px;
+  }
+  .indexTextBox h1 {
+    line-height: 1;
+    letter-spacing: 4px;
+  }
+  .indexTextBox h1::before {
+    position: absolute;
+    top: -12rem;
+    left: -17.5rem;
+    transform: scale(0.6);
+  }
+  .indexTextBox h1::after {
+    position: absolute;
+    top: -1rem;
+    right: 0rem;
+    transform: scale(0.6);
+  }
+  .indexTextBox p {
+    margin-top: 3rem;
+    font-size: 1.6rem;
+    padding-right: 15rem;
+  }
+  .indexImgBox img {
+    object-fit: contain;
+  }
+  .featuresBox {
+    position: relative;
+    height: 100%;
+    bottom: -6rem;
+  }
+  .boxCard {
+    width: 100%;
+    height: 100%;
+  }
+  .light {
+    top: -37rem;
+    left: -0rem;
+  }
+  .star1 {
+    top: 15rem;
+    left: 40rem;
+  }
+  .star2 {
+    top: 25rem;
+    left: 2rem;
+  }
+  .bracket1 {
+    top: 41rem;
+ left: 10rem;
+  }
+  .bracket2 {
+    top: 40rem;
+    left: 40rem;
+  }
+  .planet {
+    top: 33rem;
+    left: 80rem;
+    height: 6rem;
+    width: 6rem;
+  }
+  .infinity {
+    top: 30rem;
+  }
+  .infinity2 {
+
+  left: 28rem;
+  top: 64rem;
+  }
+  .curve {
+    left: 0rem;
+    top: 65rem;
+    height: 5rem;
+    width: 5rem;
+  } 
+  .zigzag {
+    height: 5rem;
+    width: 5rem;
+    top: 5rem;
+   right: 0;
+  }
+  .zigzag1 {
+  bottom: 3rem;
+  left: 0rem;
+  height: 6rem;
+  width: 6rem;
+  }
+  .angle {
+    top: 50rem;
+  right: 18rem;
+  height: 10rem;
+  width: 10rem;
+  }
+  .time {
+  bottom: 8rem;
+  right: 2rem;
+
+  } 
 }
