@@ -278,7 +278,7 @@ width: 5rem;
   }
   .indexTextBox h1::after {
        position: absolute;
-       top: -6rem;
+       top: -5rem;
     right: -6rem;
     transform: scale(0.4);
   }
