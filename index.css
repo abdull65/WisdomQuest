@@ -273,14 +273,14 @@ width: 5rem;
   .indexTextBox h1::before {
     position: absolute;
     top: -12rem;
-    left: -17.5rem;
-    transform: scale(0.5);
+    left: -18rem;
+    transform: scale(0.4);
   }
   .indexTextBox h1::after {
        position: absolute;
     top: -4rem;
     right: -2rem;
-    transform: scale(0.5);
+    transform: scale(0.4);
   }
   .indexTextBox p {
     margin-top: 3rem;
