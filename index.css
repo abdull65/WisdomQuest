@@ -306,7 +306,7 @@ width: 5rem;
   }
   .star1 {
     top: 15rem;
-    left: 40rem;
+    left: 20rem;
   }
   .star2 {
     top: 25rem;
@@ -318,7 +318,7 @@ width: 5rem;
   }
   .bracket2 {
     top: 40rem;
-    left: 40rem;
+    left: 20rem;
   }
   .planet {
     top: 38rem;
@@ -327,12 +327,11 @@ width: 5rem;
     width: 6rem;
   }
   .infinity {
-    top: 30rem;
+    top: 25rem;
   }
   .infinity2 {
-
   left: 28rem;
-  top: 64rem;
+  top: 65rem;
   }
   .curve {
     left: 0rem;
