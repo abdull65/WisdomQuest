@@ -232,7 +232,7 @@ width: 5rem;
   .indexTextBox p {
     font-size: 1.6rem;
   }
- .indexImg {
+ /* .indexImg {
   transform: scale(.8);
 }
 /* .boxCard img {
