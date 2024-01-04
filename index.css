@@ -288,10 +288,12 @@ width: 5rem;
 @media screen and (max-width: 61em){
   html {
     overflow-y: auto;
+    overflow-x: hidden;
   }
   body {
     height: 100%;
-    overflow-x: visible;
+    overflow-x: hidden;
+    overflow-y: hidden;
   }
 .indexContent {
   flex-direction: column;
