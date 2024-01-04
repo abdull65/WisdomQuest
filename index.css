@@ -193,53 +193,179 @@ right: 3rem;
 height: 5rem;
 width: 5rem;
 } 
+
+
+/* ***************************************************** */
+@media screen and (max-width: 85em){
+  .indexTextBox h1 {
+    font-size: 7.5rem;
+  }
+  .indexTextBox h1::before {
+    transform: scale(.6);
+  }
+  .indexTextBox h1::after {
+    transform: scale(.6);
+    top: -8.5rem;
+    left: 43rem;
+  }
+}
+@media screen and (max-width: 80em){
+  .indexTextBox h1::after {
+    transform: scale(.6);
+    top: -8.5rem;
+    left: 45rem;
+  }
+}
+
+@media screen and (max-width: 76em){
+  .indexTextBox .topHeader {
+    font-size: 1.6rem;
+  }
+  .indexTextBox h1 {
+    font-size: 7rem;
+  }
+  .indexTextBox h1::after {
+    transform: scale(.6);
+    top: -8.5rem;
+    left: 40rem;
+  }
+  .indexTextBox p {
+    font-size: 1.6rem;
+  }
+ .indexImg {
+  transform: scale(.8);
+}
+.boxCard img {
+  transform: scale(.8);
+}
+}
+/* ****************************************** */
+@media screen and (max-width: 72em){
+  .indexTextBox h1 {
+    font-size: 6.5rem;
+  }
+  .indexTextBox h1::after {
+    transform: scale(.6);
+    top: -8.5rem;
+    left: 36rem;
+  }
+}
+
 /* ************************************************** */
-@media screen and (max-width: 77em) {
-   .indexContent {
-   flex-direction: column;
+@media screen and (max-width: 68em){
+  .indexTextBox h1 {
+    font-size: 6rem;
   }
+  .indexTextBox h1::before {
+    transform: scale(.5);
+    top: -11.5rem;
+  }
+
+  .indexTextBox h1::after {
+    transform: scale(.5);
+    top: -9.5rem;
+    left: 32rem;
+  }
+}
+
+/* ********************************************** */
+@media screen and (max-width: 64em){
+  .indexTextBox h1 {
+    font-size: 5.5rem;
+  }
+  .indexTextBox h1::before {
+    transform: scale(.4);
+    top: -11.8rem;
+  }
+  .indexTextBox h1::after {
+    transform: scale(.4);
+    top: -10.4rem;
+    left: 28rem;
+  }
+}
+
+/* ********************************************** */
+@media screen and (max-width: 61em){
   html {
-    overflow: auto;
-    overflow-x: hidden;
+    overflow-y: auto;
   }
+  body {
+    height: 100%;
+    overflow-x: visible;
+  }
+.indexContent {
+  flex-direction: column;
+  /* gap: 3rem; */
+  height: 100%;
+  width: 100%;
+  margin-left: 0rem;
+  padding-left: 0 !important;
 }
-@media screen and (max-width: 66em) {
+.indexTextBox {
+width: 100%;
+margin-top: 10rem;
+margin-left: 15rem;
+}
+.indexTextBox h1 {
+  font-size: 8rem;
+}
+.indexTextBox h1::before {
+  transform: scale(.6);
+  top: -10rem;
+}
+.indexTextBox h1::after {
+    transform: scale(.6);
+    top: -8rem;
+    right: -68rem;
+}
+.indexTextBox p {
+  font-size: 2rem;
+  padding-right: 35rem;
+
+}
+.indexImgBox {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+.indexImgBox img {
+  width: 100%;
+  height: 100%;
+}
+.featuresBox {
+  position: relative;
+  bottom: 0;
+}
+}
+/* ********************************************** */
+@media screen and (max-width: 56em){
+ 
+  .indexTextBox h1 {
+    line-height: 1;
+    letter-spacing: 4px;
+    /* font-size: 12rem; */
+  }
+  .indexTextBox h1::before {
+    transform: scale(0.6);
+    top: -11.5rem;
+    left: -17rem;
+  }
   .indexTextBox h1::after {
-    right: 14rem;
+    transform: scale(0.6);
+    top: -9.5rem;
+    right: -90.4rem;
+  }
+  .featuresBox {
+    position: relative;
+    bottom: 0;
   }
 }
 
-@media screen and (max-width: 64em) {
-  .indexTextBox h1::after {
-    right: 12rem;
+/* ************************************************** */
+@media screen and (max-width: 36em){
+  body {
+    height: 100%;
   }
-}
-
-@media screen and (max-width: 63em) {
-  .indexTextBox h1::after {
-    right: 10rem;
-  }
-}
-
-@media screen and (max-width: 61em) {
-  .indexTextBox h1::after {
-    right: 10rem;
-  }
-}
-
-@media screen and (max-width: 58em) {
-  .indexTextBox h1::after {
-    right: 6rem;
-  }
-}
-
-@media screen and (max-width: 55em) {
-  .indexTextBox h1::after {
-    right: 3rem;
-  }
-}
-
-@media screen and (max-width: 39em){
   #desktop {
     display: none;
   }
@@ -250,38 +376,90 @@ width: 5rem;
   body {
     height: 100%;
   }
-  .indexContent {
-    flex-direction: column;
-    gap: 3rem;
-    height: 100%;
-    padding-left: 0 !important;
-  }
+
   .indexTextBox {
     width: 100%;
     margin-top: 15rem;
-    margin-left: 8rem !important;
-  }
-  .indexTextBox .topHeader {
-    font-size: 1.6rem;
-    margin-bottom: .5rem;
-    letter-spacing: 3px;
-  }
+  margin-left: 15rem;
+}
   .indexTextBox h1 {
     line-height: 1;
     letter-spacing: 4px;
-    font-size: 6rem;
+    font-size: 10.2rem;
+  }
+  .indexTextBox h1::before {
+    transform: scale(0.7);
+    top: -11rem;
+    left: -17rem;
+  }
+  .indexTextBox h1::after {
+    transform: scale(0.7);
+    top: 2rem;
+    left: 24rem;
+  }
+}
+
+@media screen and (max-width: 37em){
+
+}
+
+
+/* *************************************** */
+@media screen and (max-width: 34em){
+  .indexTextBox {
+    margin-left: 12rem;
+  }
+  .indexTextBox .topHeader {
+    font-size: 1.6rem;
+    margin-bottom: 1rem;
+  }
+  .indexTextBox h1 {
+    line-height: .9;
+    letter-spacing: 4px;
+    font-size: 8rem;
+  }
+  .indexTextBox h1::before {
+    top: -12rem;
+ transform: scale(0.6);
+}
+  .indexTextBox h1::after {
+    position: absolute;
+    top: -3rem;
+ left: -8rem;
+ transform: scale(0.6);
+}
+.indexTextBox p {
+  font-size: 1.6rem;
+  margin-top: 3rem;
+  padding-right: 10rem;
+}
+}
+/* ************************************************** */
+@media screen and (max-width: 32em){
+  .indexTextBox {
+    margin-left: 8rem;
+  }
+  .indexTextBox .topHeader {
+    font-size: 1.6rem;
+    margin-bottom: 1sssrem;
+    letter-spacing: 3px;
+  }
+  .indexTextBox h1 {
+    line-height: .9;
+    letter-spacing: 4px;
+    font-size: 8rem;
   }
   .indexTextBox h1::before {
     position: absolute;
-       top: -12.5rem;
+       top: -11.5rem;
     left: -16.5rem;
-    transform: scale(0.4);
+    transform: scale(0.5);
   }
   .indexTextBox h1::after {
        position: absolute;
-       top: -5rem;
-    right: -4rem;
-    transform: scale(0.4);
+       top: -3rem;
+    left: -15rem;
+    transform: scale(0.5);
   }
   .indexTextBox p {
     margin-top: 3rem;
@@ -363,3 +541,14 @@ width: 5rem;
 
   } 
 }
+/* @media screen and (max-width: 39em){
+  .indexTextBox h1 {
+    line-height: 1;
+    letter-spacing: 4px;
+    font-size: 10rem;
+  }
+  .indexTextBox h1::after {
+    left: 3rem;
+  }
+} */
+
